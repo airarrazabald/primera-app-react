@@ -4,11 +4,11 @@ import './assets/css/App.css';
 //Importar Componentes
 import MiComponente from './components/MiComponente';
 
-function HolaMundo(nombre,edad){
+function ListarLenguajes(nombre,profesion){
   var presentacion = 
   <div>
-    <h2>Hola, soy {nombre}</h2>
-    <h3>Tengo {edad}</h3>
+    <h2>Hola, nombre es {nombre}</h2>
+    <h3>Soy {profesion} y me desempeño como fullstack developer</h3>
   </div>;
 
   return presentacion;
@@ -16,16 +16,16 @@ function HolaMundo(nombre,edad){
 
 function App() {
   var nombre = "Abelardo Irarrazabal";
-  var edad = 29;
+  var profesion = "Ingeniero de software";
 
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Hola esta es tu nueva app de react
+          Primera App en React
         </p>
-        {HolaMundo(nombre,edad)}
+        {ListarLenguajes(nombre,profesion)}
         <section className="componentes">
           <MiComponente/>
         </section>
